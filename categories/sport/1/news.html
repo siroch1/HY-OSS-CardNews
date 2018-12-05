@@ -50,11 +50,19 @@
 <meta property="og:url" content="https://doublik.github.io/HY-OSS-CardNews/categories/sport/1/news.html"/>
 <meta property="og:description" content="오픈소스 테스트"/>
 <meta property="og:image" content="https://doublik.github.io/HY-OSS-CardNews/categories/sport/1/tyle-zx1-1.png"/>
-<script>
-  function shareFB(url) {
-    window.open("https://www.facebook.com/sharer/sharer.php?u=" + url);
-  }
-</script>
+<script type="text/javascript">
+    // send to SNS
+    function toSNS(sns, strTitle, strURL) {
+        var snsArray = new Array();
+        var strMsg = strTitle + " " + strURL;
+        var image = "https://doublik.github.io/HY-OSS-CardNews/categories/sport/1/tyle-zx1-1.png";
+ 
+        snsArray['twitter'] = "http://twitter.com/home?status=" + encodeURIComponent(strTitle) + ' ' + encodeURIComponent(strURL);
+        snsArray['facebook'] = "http://www.facebook.com/share.php?u=" + encodeURIComponent(strURL);
+        snsArray['line'] = "http://line.me/R/msg/text/?" + encodeURIComponent(strTitle) + " " + encodeURIComponent(strURL);
+        window.open(snsArray[sns]);
+    }
+    </script>
 </head>
 <body>
   <!-- Swiper -->
@@ -73,8 +81,9 @@
 	<div class="swiper-button-prev"></div>
   <div style="position:absolute; left:1%; top: 1%; z-index: 10;">
       <ul class="icons">
-        <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li><br>
-        <li><a href="javascript:shareFB('https://doublik.github.io/HY-OSS-CardNews/categories/sport/1/news.html')" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li><br>
+        <li><a href="javascript:toSNS('facebook','오픈소스 스포츠','https://doublik.github.io/HY-OSS-CardNews/categories/sport/1/news.html')" title="페이스북으로 가져가기"><img src="../../../images/facebook.png" style="height:50px;"></a></li><br>
+        <li><a href="javascript:toSNS('twitter','오픈소스 스포츠','https://doublik.github.io/HY-OSS-CardNews/categories/sport/1/news.html')" title="트위터로 가져가기"><img src="../../../images/twitter.png" style="height:50px;"></a></li><br>
+        <li><a href="javascript:toSNS('line','오픈소스 스포츠','https://doublik.github.io/HY-OSS-CardNews/categories/sport/1/news.html')" title="라인으로 가져가기"><img src="../../../images/line.png" style="height:50px;"></a></li>
       </ul>
   </div>
   </div>
