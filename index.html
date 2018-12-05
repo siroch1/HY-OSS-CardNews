@@ -22,7 +22,7 @@
 			});
 
 
-			var checkLoginStatus = function(response) {
+			/*var checkLoginStatus = function(response) {
       console.log(response);
       // statusChangeCallback(response);
       if(response.status === 'connected'){
@@ -34,9 +34,10 @@
         document.querySelector('#authBtn').value = 'Login';
         document.querySelector('#name').innerHTML = '';
       }
-    }
+    }*/
 			
 			FB.getLoginStatus(function(response) {
+				console.log(response);
 				statusChangeCallback(response);
 			});
 				
