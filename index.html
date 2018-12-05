@@ -79,6 +79,20 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+
+  function posting() {
+	  FB.api(
+		  '/me/feed','post', {"message" : "OSS FACEBOOK POSTING TEST"},
+		  function(response) {
+			  console.log('facebook-response', response);
+			  if (response && !response.error) {
+				alert("success");
+			  } else {
+				alert("nope");
+			  }
+		  }
+	  );
+  }
 </script>
 
 <!--
@@ -87,10 +101,14 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
+</div>
+
+<div>
+	<button id="posting" onclick="posting()">포스팅</button>
 </div>
 
 </body>
