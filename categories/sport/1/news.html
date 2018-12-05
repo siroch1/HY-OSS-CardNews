@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Swiper demo</title>
+  <title>OPEN SOURCE</title>
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="../../../assets/css/swiper.min.css">
+  <link rel="stylesheet" href="../../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../../assets/css/noscript.css" /></noscript>
 
   <!-- Demo styles -->
   <style>
@@ -43,6 +45,16 @@
 	  align-items: center;
     }
   </style>
+
+<meta property="og:title" content="오픈소스 테스트"/>
+<meta property="og:url" content="https://doublik.github.io/HY-OSS-CardNews/categories/sport/1/news.html"/>
+<meta property="og:description" content="오픈소스 테스트"/>
+<meta property="og:image" content="https://doublik.github.io/HY-OSS-CardNews/categories/sport/1/tyle-zx1-1.png"/>
+<script>
+  function shareFB(url) {
+    window.open("https://www.facebook.com/sharer/sharer.php?u=" + url);
+  }
+</script>
 </head>
 <body>
   <!-- Swiper -->
@@ -59,7 +71,12 @@
     <!-- Add Arrows -->
     <div class="swiper-button-next"></div>
 	<div class="swiper-button-prev"></div>
-	<div style="position:absolute; top: 1%;z-index: 10;">ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</div>
+  <div style="position:absolute; left:1%; top: 1%; z-index: 10;">
+      <ul class="icons">
+        <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li><br>
+        <li><a href="javascript:shareFB('https://doublik.github.io/HY-OSS-CardNews/categories/sport/1/news.html')" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li><br>
+      </ul>
+  </div>
   </div>
 
   <!-- Swiper JS -->
