@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OPEN SOURCE</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="../../../assets/css/swiper.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 1em;
+      color:#000;
+      margin: 0;
+	  padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: rgb(77, 77, 77);
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+	  align-items: center;
+    }
+  </style>
+
+  <meta property="og:title" content="글제목"/>
+  <meta property="og:url" content="글url"/>
+  <meta property="og:description" content="글내용일부"/>
+  <meta property="og:image" content="글이미지"/>
+  <meta property="og:title" content="오픈소스 테스트"/>
+  <meta property="og:url" content="https://doublik.github.io/HY-OSS-CardNews/categories/tour/1/news.html"/>
+  <meta property="og:description" content="오픈소스 테스트"/>
+  <meta property="og:image" content="https://doublik.github.io/HY-OSS-CardNews/categories/tour/1/1.jpg"/>
+  <script type="text/javascript">
+      // send to SNS
+      function toSNS(sns, strTitle, strURL) {
+          var snsArray = new Array();
+          var strMsg = strTitle + " " + strURL;
+          var image = "https://doublik.github.io/HY-OSS-CardNews/categories/tour/1/1.jpg";
+  
+          snsArray['twitter'] = "http://twitter.com/home?status=" + encodeURIComponent(strTitle) + ' ' + encodeURIComponent(strURL);
+          snsArray['facebook'] = "http://www.facebook.com/share.php?u=" + encodeURIComponent(strURL);
+          snsArray['line'] = "http://line.me/R/msg/text/?" + encodeURIComponent(strTitle) + " " + encodeURIComponent(strURL);
+          window.open(snsArray[sns]);
+      }
+  </script>
+</head>
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="1.jpg" style="height: 100%;"></div>
+      <div class="swiper-slide"><img src="2.jpg" style="height: 100%;"></div>
+      <div class="swiper-slide"><img src="3.jpg" style="height: 100%;"></div>
+      <div class="swiper-slide"><img src="4.jpg" style="height: 100%;"></div>
+      <div class="swiper-slide"><img src="5.jpg" style="height: 100%;"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+  <div style="position:absolute; left:1%; top: 1%; z-index: 10;">
+      <ul class="icons">
+        <li><a href="javascript:toSNS('facebook','오픈소스 여행','https://doublik.github.io/HY-OSS-CardNews/categories/tour/1/news.html')" title="페이스북으로 가져가기"><img src="../../../images/facebook.png" style="height:50px;"></a></li><br>
+        <li><a href="javascript:toSNS('twitter','오픈소스 여행','https://doublik.github.io/HY-OSS-CardNews/categories/tour/1/news.html')" title="트위터로 가져가기"><img src="../../../images/twitter.png" style="height:50px;"></a></li><br>
+        <li><a href="javascript:toSNS('line','오픈소스 여행','https://doublik.github.io/HY-OSS-CardNews/categories/tour/1/news.html')" title="라인으로 가져가기"><img src="../../../images/line.png" style="height:50px;"></a></li>
+      </ul>
+  </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="../../../assets/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
